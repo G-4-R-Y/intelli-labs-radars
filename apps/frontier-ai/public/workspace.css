@@ -1,0 +1,21 @@
+.research-workspace { width: min(880px, 94vw); max-height: 88vh; color: #ececf5; background: #171820; border: 1px solid #474255; border-radius: 18px; padding: 0; }
+.research-workspace::backdrop { background: #090a10ba; }
+.rw-body { display: grid; gap: 14px; padding: clamp(16px, 3vw, 32px); }
+.rw-body h2, .rw-body h3, .rw-body p { margin: 0; }
+.rw-head, .rw-tabs, .rw-controls, .rw-section { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.rw-head { justify-content: space-between; }
+.rw-tabs { padding: 0; }
+.rw-list { max-height: 43vh; overflow: auto; }
+.rw-row { display: grid; justify-items: start; gap: 5px; border-top: 1px solid #3d394a; padding: 12px 0; }
+.rw-select { display: flex; gap: 8px; align-items: baseline; }
+.rw-section { padding: 12px; border: 1px solid #3d394a; border-radius: 12px; }
+.rw-section h3 { width: 100%; }
+.rw-body button, .rw-body input:not([type=checkbox]), .rw-body select, .rw-controls button, button.rw-launch { font: inherit; color: #ececf5; background: #232431; border: 1px solid #48465b; border-radius: 8px; padding: 6px 10px; max-width: 100%; }
+.rw-body button, .rw-controls button, button.rw-launch { cursor: pointer; }
+.rw-body button[aria-pressed=true], .rw-controls button[aria-pressed=true], button.rw-launch { color: #90f7fc; border-color: #63b8c5; }
+.rw-controls { padding-top: 8px; font-size: .8rem; }
+.rw-body a { color: #90f7fc; }
+.rw-body small { color: #bdb7cb; }
+.rw-message { color: #ffb8eb; }
+.rw-review { white-space: pre-wrap; margin: 10px 0 !important; }
+.rw-row details a { display: block; margin: 6px 0; overflow-wrap: anywhere; }

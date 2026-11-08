@@ -1,0 +1,6 @@
+.env*
+.dev.vars*
+*.pem
+node_modules
+digest-output/
+config/*.local.json

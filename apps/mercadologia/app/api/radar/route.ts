@@ -1,0 +1,3 @@
+import { status, sync, owner } from '../../../lib/radar';
+export async function GET(request:Request){try{return Response.json({...await status(),canUpdate:await owner(request.headers)},{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'Base temporariamente indisponível'},{status:503})}}
+export async function POST(request:Request){if(!await owner(request.headers))return Response.json({error:'Entre com a conta proprietária para atualizar a base.'},{status:403});try{const input:any=await request.json();return Response.json(await sync(input.source_ids,input.days))}catch(e){return Response.json({error:e instanceof Error?e.message:'Falha na atualização'},{status:400})}}

@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791605332470,
+      "tag": "0000_tranquil_trauma",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794116229401,
+      "tag": "0001_research_workspace",
+      "breakpoints": true
+    }
+  ]
+}

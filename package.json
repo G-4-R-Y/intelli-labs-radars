@@ -1,0 +1,12 @@
+{
+  "name": "intelli-labs-radars",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "fields": "node scripts/radars.mjs fields",
+    "field:add": "node scripts/radars.mjs add-field",
+    "digest": "node scripts/radars.mjs digest",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "fields": [
+    {
+      "id": "frontier-ai",
+      "name": "Frontier Radar · AI",
+      "feedEnv": "FRONTIER_RADAR_FEED_URL",
+      "visibility": "private",
+      "gatewayTokenEnv": "FRONTIER_RADAR_GATEWAY_TOKEN",
+      "limit": 8
+    },
+    {
+      "id": "mercadologia",
+      "name": "Observatório de Mercadologia",
+      "feedEnv": "MARKETING_RADAR_FEED_URL",
+      "visibility": "public",
+      "limit": 8
+    }
+  ]
+}

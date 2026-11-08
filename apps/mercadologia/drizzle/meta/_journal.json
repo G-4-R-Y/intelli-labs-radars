@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792551734363,
+      "tag": "0000_wise_stingray",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794116240021,
+      "tag": "0001_research_workspace",
+      "breakpoints": true
+    }
+  ]
+}

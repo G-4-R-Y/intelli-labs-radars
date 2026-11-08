@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Radar privado de pesquisa de ponta em IA: mapa temático, novidades e fontes primárias." />
+    <meta name="color-scheme" content="dark" />
+    <title>Frontier Radar — Pesquisa em IA</title>
+    <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="/workspace.css">
+</head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Frontier Radar, início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>FRONTIER <b>RADAR</b></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#mapa">Mapa</a>
+        <a href="#radar">Radar</a>
+        <a href="#fontes">Fontes</a>
+      </nav>
+      <span class="privacy"><span></span>Catálogo público · escrita protegida</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow"><span>INTELIGÊNCIA DE PESQUISA</span><time datetime="2026-10-10">Atualizado em 10 out 2026</time></div>
+        <div class="hero-grid">
+          <div>
+            <h1 id="hero-title">Um mapa vivo da fronteira em <em>reasoning</em>.</h1>
+            <p>Do Chain-of-Thought ao raciocínio latente: pesquisa consolidada, sinais novos e fontes primárias em um único lugar.</p>
+          </div>
+          <div class="hero-note">
+            <span class="pulse" aria-hidden="true"></span>
+            <div>
+              <small>LEITURA DO MOMENTO</small>
+              <strong>A fronteira migrou de “prompts melhores” para sistemas que alocam compute, verificam trajetórias e aprendem a raciocinar.</strong>
+            </div>
+          </div>
+        </div>
+        <div class="metrics" aria-label="Resumo do radar">
+          <div><strong id="metric-works">34</strong><span>trabalhos e artefatos</span></div>
+          <div><strong>10</strong><span>linhas de pesquisa</span></div>
+          <div><strong>6</strong><span>ecossistemas primários</span></div>
+          <div><strong id="metric-new">1</strong><span>novo nos últimos 30 dias</span></div>
+        </div>
+      </section>
+
+      <section class="panel map-section" id="mapa" aria-labelledby="map-title">
+        <div class="section-head">
+          <div>
+            <span class="section-index">01 / MAPA DE TEMAS</span>
+            <h2 id="map-title">Como as ideias se conectam</h2>
+          </div>
+          <p>Clique em um nó para entender a linha e filtrar o radar. As conexões mostram influência conceitual, não uma cronologia rígida.</p>
+        </div>
+
+        <div class="map-shell">
+          <div class="map-canvas" id="map-canvas">
+            <svg class="map-lines" id="map-lines" aria-hidden="true"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" /></marker></defs></svg>
+            <button class="map-node root" style="--col:1;--row:2" data-topic="prompting" data-node="cot"><span>2022</span><strong>Chain-of-Thought</strong><small>raciocínio serial</small></button>
+            <button class="map-node" style="--col:2;--row:1" data-topic="sampling" data-node="sampling"><span>AMPLIAR</span><strong>Sampling</strong><small>Self-Consistency · BoN</small></button>
+            <button class="map-node" style="--col:2;--row:2" data-topic="search" data-node="search"><span>EXPLORAR</span><strong>Search</strong><small>ToT · RAP · LATS</small></button>
+            <button class="map-node" style="--col:2;--row:3" data-topic="agents" data-node="agents"><span>AGIR</span><strong>Agentes</strong><small>ReAct · Reflexion</small></button>
+            <button class="map-node" style="--col:3;--row:1" data-topic="verifiers" data-node="verifiers"><span>SELECIONAR</span><strong>Verifiers</strong><small>PRM · reward models</small></button>
+            <button class="map-node" style="--col:3;--row:3" data-topic="optimization" data-node="optimization"><span>OTIMIZAR</span><strong>Prompt → programa</strong><small>DSPy · TextGrad · GEPA</small></button>
+            <button class="map-node key" style="--col:4;--row:1" data-topic="scaling" data-node="scaling"><span>ESCALAR</span><strong>Test-time compute</strong><small>adaptive budget</small></button>
+            <button class="map-node" style="--col:4;--row:2" data-topic="rl" data-node="rl"><span>TREINAR</span><strong>Reasoning RL</strong><small>R1 · Kimi · o-series</small></button>
+            <button class="map-node" style="--col:4;--row:3" data-topic="agents" data-node="tools"><span>ATERRAR</span><strong>Tools + ambiente</strong><small>feedback verificável</small></button>
+            <button class="map-node" style="--col:5;--row:1" data-topic="scaling" data-node="adaptive"><span>CONTROLAR</span><strong>Compute adaptativo</strong><small>quando pensar e parar</small></button>
+            <button class="map-node" style="--col:5;--row:3" data-topic="optimization" data-node="compound"><span>COMPOR</span><strong>Sistemas inteiros</strong><small>modelo + busca + tools</small></button>
+            <button class="map-node frontier" style="--col:6;--row:2" data-topic="latent" data-node="latent"><span>FRONTEIRA</span><strong>Reasoning latente</strong><small>Coconut · A*-V2</small></button>
+          </div>
+
+          <aside class="focus-card" id="focus-card" aria-live="polite">
+            <div class="focus-top"><span id="focus-kicker">VISÃO GERAL</span><button id="clear-focus" aria-label="Limpar seleção" title="Limpar seleção">×</button></div>
+            <h3 id="focus-title">De prompt a sistema</h3>
+            <p id="focus-copy">A mudança decisiva não foi uma nova árvore de pensamentos: foi combinar geração, busca, avaliação, feedback e orçamento de inferência.</p>
+            <div class="focus-meta"><span id="focus-count">33 itens relacionados</span><button id="focus-action">Ver no radar ↓</button></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel radar-section" id="radar" aria-labelledby="radar-title">
+        <div class="section-head">
+          <div>
+            <span class="section-index">02 / RADAR + FILA DE LEITURA</span>
+            <h2 id="radar-title">O que merece atenção</h2>
+          </div>
+          <p>Prioridade por relevância conceitual, novidade e proximidade da fonte original. Salvos e lidos ficam neste navegador.</p>
+        </div>
+
+        <div class="radar-toolbar">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Buscar trabalho, lab ou ideia…" autocomplete="off" />
+          </label>
+          <label><span>Fonte</span><select id="source-filter"><option value="all">Todas</option><option value="paper">Papers</option><option value="frontier">Labs de fronteira</option><option value="china">China</option></select></label>
+          <label><span>Período</span><select id="period-filter"><option value="all">Todo o mapa</option><option value="30">Últimos 30 dias</option><option value="90">Últimos 90 dias</option><option value="2026">Ano de 2026</option><option value="2025">Ano de 2025</option></select></label>
+          <label><span>Ordenar</span><select id="sort-filter"><option value="relevance">Relevância</option><option value="date">Mais recentes</option><option value="saved">Salvos primeiro</option></select></label>
+        </div>
+
+        <div class="topic-row" id="topic-row" aria-label="Filtros de tema"></div>
+
+        <div class="results-head">
+          <p><strong id="result-count">33</strong> resultados <span id="active-filter"></span></p>
+          <span id="scan-status" aria-live="polite"></span>
+          <button class="queue-toggle" id="queue-toggle" aria-pressed="false"><span aria-hidden="true">◇</span> Minha fila <b id="queue-count">0</b></button>
+        </div>
+        <div class="research-list" id="research-list"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <strong>Nenhum sinal com esses filtros.</strong>
+          <button id="reset-filters">Limpar filtros</button>
+        </div>
+        <button class="load-more" id="load-more">Mostrar mais trabalhos</button>
+      </section>
+
+      <section class="panel sources-section" id="fontes" aria-labelledby="sources-title">
+        <div class="section-head">
+          <div>
+            <span class="section-index">03 / COBERTURA DE FONTES</span>
+            <h2 id="sources-title">Primário primeiro</h2>
+          </div>
+          <p>Curadores continuam valiosos para interpretação. Para descoberta rápida, o radar começa em papers, labs e repositórios.</p>
+        </div>
+
+        <div class="source-grid">
+          <article class="source-card accent-us">
+            <header><span>LABS DE FRONTEIRA</span><b>US</b></header>
+            <h3>OpenAI + Anthropic</h3>
+            <p>Research posts, system cards, documentação, engineering e trabalhos de interpretabilidade de reasoning.</p>
+            <div class="source-links">
+              <a href="https://openai.com/research/" target="_blank" rel="noreferrer">OpenAI Research ↗</a>
+              <a href="https://www.anthropic.com/research" target="_blank" rel="noreferrer">Anthropic Research ↗</a>
+            </div>
+          </article>
+          <article class="source-card accent-cn">
+            <header><span>COBERTURA ADICIONADA</span><b>CN</b></header>
+            <h3>DeepSeek · Qwen · Kimi · Seed</h3>
+            <p>Releases, technical reports, ModelScope e blogs oficiais para reduzir o atraso de fontes anglófonas.</p>
+            <div class="source-links">
+              <a href="https://github.com/deepseek-ai" target="_blank" rel="noreferrer">DeepSeek ↗</a>
+              <a href="https://qwenlm.github.io/blog/" target="_blank" rel="noreferrer">Qwen ↗</a>
+              <a href="https://moonshotai.github.io/" target="_blank" rel="noreferrer">Moonshot ↗</a>
+              <a href="https://seed.bytedance.com/" target="_blank" rel="noreferrer">ByteDance Seed ↗</a>
+            </div>
+          </article>
+          <article class="source-card accent-open">
+            <header><span>DISCOVERY</span><b>OPEN</b></header>
+            <h3>arXiv · OpenReview · HF</h3>
+            <p>O núcleo de baixa latência, com código e modelos no GitHub, Hugging Face e ModelScope quando disponíveis.</p>
+            <div class="source-links">
+              <a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noreferrer">arXiv cs.AI ↗</a>
+              <a href="https://openreview.net/" target="_blank" rel="noreferrer">OpenReview ↗</a>
+              <a href="https://huggingface.co/papers" target="_blank" rel="noreferrer">HF Daily Papers ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="pipeline">
+          <span>PIPELINE RECOMENDADO</span>
+          <ol>
+            <li><b>01</b>Papers &amp; reviews</li>
+            <li><b>02</b>Labs &amp; autores</li>
+            <li><b>03</b>Código &amp; modelos</li>
+            <li><b>04</b>Reddit / X</li>
+            <li><b>05</b>YouTube para síntese</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>FRONTIER RADAR · INTELLI LABS</span>
+      <span>Privado · fontes originais · estado local</span>
+    </footer>
+
+    <template id="paper-template">
+      <article class="paper-card">
+        <div class="paper-rank"><span class="rank-value"></span><small>RELEV.</small></div>
+        <div class="paper-main">
+          <div class="paper-meta"><span class="freshness"></span><span class="paper-date"></span><span class="paper-source"></span></div>
+          <h3></h3>
+          <p class="paper-summary"></p>
+          <details class="distill" hidden>
+            <summary>Ver destilação técnica</summary>
+            <div class="distill-grid">
+              <div><b>O que é novo</b><p class="distill-contribution"></p></div>
+              <div><b>Evidência</b><p class="distill-evidence"></p></div>
+              <div><b>Limites</b><p class="distill-limitations"></p></div>
+              <div><b>Veredito</b><p class="distill-verdict"></p></div>
+            </div>
+          </details>
+          <div class="paper-bottom"><div class="paper-tags"></div><div class="paper-actions"><button class="read-btn"></button><button class="save-btn" aria-label="Salvar na fila"></button><a target="_blank" rel="noreferrer">Fonte original ↗</a></div></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="/workspace-ui.js"></script><script src="./app.js"></script>
+  </body>
+</html>
