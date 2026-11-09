@@ -1,5 +1,7 @@
 # Intelli Labs Radars
 
+![Intelli Labs Radars — Pesquisa em IA e Mercadologia](assets/banner.webp)
+
 Research observatories for AI and marketing, with a shared field registry and a digest CLI. The observatories retain their individual catalogs, filters, source links, reading lists, toolboxes, and review queues.
 
 | App | Feed | Intended access |
